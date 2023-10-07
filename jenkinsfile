@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh '''ls -ltr
+                pwd
                  pwd
                  echo 'hello'
                  '''
