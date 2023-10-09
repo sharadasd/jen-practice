@@ -39,7 +39,7 @@ pipeline {
                 //error 'failed'
             }
         }
-         stage('input') {
+         stage('params') {
             steps {
                 echo "Hello ${params.PERSON}"
                 echo "Biography: ${params.BIOGRAPHY}"
