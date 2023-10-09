@@ -1,12 +1,19 @@
 pipeline {
       agent { node { label 'agent-1' } }
       stages {
+        stage('Example') {
+            environment { 
+                auth = credentials('ssh-auth') 
+            }
+            steps {
+                sh 'printenv'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
                 sh '''ls -ltr
                 pwd
-                 pwd
                  echo 'hello'
                  '''
             }
