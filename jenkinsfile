@@ -72,6 +72,7 @@ pipeline {
                 echo "deploying to prod"
             }
         }
+        stage('Parallel Stage') {
         parallel {
                 stage('Branch A') {
                     steps {
@@ -93,6 +94,7 @@ pipeline {
             
                     }
     }
+        }
         }
       post { 
         always { 
